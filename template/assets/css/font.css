@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Source Sans 3";
+    src: url("../font/Source Sans 3/SourceSans3-Regular.eot");
+    src: url("../font/Source Sans 3/SourceSans3-Regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("../font/Source Sans 3/SourceSans3-Regular.woff2") format("woff2"),
+        url("../font/Source Sans 3/SourceSans3-Regular.woff") format("woff"),
+        url("../font/Source Sans 3/SourceSans3-Regular.ttf") format("truetype"),
+        url("../font/Source Sans 3/SourceSans3-Regular.svg#SourceSans3-Regular")
+            format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    src: url("../font/Source Sans 3/SourceSans3-Light.eot");
+    src: url("../font/Source Sans 3/SourceSans3-Light.eot?#iefix")
+            format("embedded-opentype"),
+        url("../font/Source Sans 3/SourceSans3-Light.woff2") format("woff2"),
+        url("../font/Source Sans 3/SourceSans3-Light.woff") format("woff"),
+        url("../font/Source Sans 3/SourceSans3-Light.ttf") format("truetype"),
+        url("../font/Source Sans 3/SourceSans3-Light.svg#SourceSans3-Light")
+            format("svg");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Kanit";
+    src: url("../font/Kanit/Kanit-ExtraLight.eot");
+    src: url("../font/Kanit/Kanit-ExtraLight.eot?#iefix")
+            format("embedded-opentype"),
+        url("../font/Kanit/Kanit-ExtraLight.woff2") format("woff2"),
+        url("../font/Kanit/Kanit-ExtraLight.woff") format("woff"),
+        url("../font/Kanit/Kanit-ExtraLight.ttf") format("truetype"),
+        url("../font/Kanit/Kanit-ExtraLight.svg#Kanit-ExtraLight") format("svg");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anuphan";
+    src: url("../font/Anuphan/Anuphan-ExtraLight.eot");
+    src: url("../font/Anuphan/Anuphan-ExtraLight.eot?#iefix")
+            format("embedded-opentype"),
+        url("../font/Anuphan/Anuphan-ExtraLight.woff2") format("woff2"),
+        url("../font/Anuphan/Anuphan-ExtraLight.woff") format("woff"),
+        url("../font/Anuphan/Anuphan-ExtraLight.ttf") format("truetype"),
+        url("../font/Anuphan/Anuphan-ExtraLight.svg#Anuphan-ExtraLight")
+            format("svg");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anuphan";
+    src: url("../font/Anuphan/Anuphan-Regular.eot");
+    src: url("../font/Anuphan/Anuphan-Regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("../font/Anuphan/Anuphan-Regular.woff2") format("woff2"),
+        url("../font/Anuphan/Anuphan-Regular.woff") format("woff"),
+        url("../font/Anuphan/Anuphan-Regular.ttf") format("truetype"),
+        url("../font/Anuphan/Anuphan-Regular.svg#Anuphan-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Kanit";
+    src: url("../font/Kanit/Kanit-Light.eot");
+    src: url("../font/Kanit/Kanit-Light.eot?#iefix") format("embedded-opentype"),
+        url("../font/Kanit/Kanit-Light.woff2") format("woff2"),
+        url("../font/Kanit/Kanit-Light.woff") format("woff"),
+        url("../font/Kanit/Kanit-Light.ttf") format("truetype"),
+        url("../font/Kanit/Kanit-Light.svg#Kanit-Light") format("svg");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
