@@ -11,8 +11,18 @@
                     <img src="./assets/media/shorten-text-logo.svg" alt="Logo Text Shorten" draggable="false">
                 </div>
             </a>
+        <?php } elseif (isset($staff["is-submit"])) { ?>
+            <button
+                class="cta"
+                type="submit">
+                <?php echo $staff["cta"] ?>
+            </button>
         <?php } else { ?>
-            <a href="<?php echo $staff["link"] ?>" class="cta" target="_blank">
+            <a
+                href="<?php echo $staff["link"] ?>"
+                class="cta"
+                <?php if (isset($staff["new-tab"])) echo "target='_blank'"; ?>
+                <?php if (isset($staff["file-download"])) echo "download"; ?>>
                 <?php echo $staff["cta"] ?>
             </a>
         <?php } ?>

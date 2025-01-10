@@ -7,7 +7,7 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Princess Galyani Vadhana Institute of Music</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -30,9 +30,12 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/_wp-css/plugins/contact-form-7/styles.css" type="text/css" media="all">
     <!-- CSS:LIBRARY -->
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/library/animate.min.css">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/library/jquery-ui-datepicker.min.css">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/plugin/magnific-popup/magnific-popup.min.css">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/plugin/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/plugin/liMarquee/liMarquee.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+
     <!-- CSS:CONFIG -->
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/font.css">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/iconfont.css">
@@ -45,6 +48,8 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
     <script src="<?php echo $root; ?>assets/js/library/jquery-3.6.0.min.js"></script>
     <script src="<?php echo $root; ?>assets/js/library/jquery-migrate-3.4.0.min.js"></script>
     <script src="<?php echo $root; ?>assets/js/library/jquery.easing.1.3.min.js"></script>
+    <script src="<?php echo $root; ?>assets/js/library/jquery-ui-datepicker.min.js"></script>
+
 
     <!-- web by ::* www.plaimanas.com -->
 </head>
@@ -60,8 +65,8 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
 
                 <!-- Logo -->
                 <div class="header-logo">
-                    <a href="<?php echo $root; ?>index.php" class="logo">
-                        <img src="<?php echo $root; ?>assets/media/logo-with-text.png" alt="PGVIM Logo" draggable="false">
+                    <a href="<?php echo $root; ?>index.php" class="object-auto">
+                        <img src="<?php echo $root; ?>assets/media/logo-with-text.png" alt="PGVIM Logo" class="logo">
                     </a>
                 </div>
 
@@ -74,89 +79,176 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
                                 <div class="panel-container">
                                     <div class="panel-body">
                                         <ul class="menu size-button2">
-                                            <li id="about-breadcrumb-trigger" class="breadcrumb-trigger">
-                                                <p>
+                                            <li class="has-submenu first-level">
+                                                <a href="javascript:;">
                                                     ABOUT US
-                                                    <i class="ic ic-chevron-down size-icon-2xs show-md"></i>
-                                                    <i class="ic ic-chevron-right size-icon-2xs hidden-device-md"></i>
-                                                </p>
+                                                    <i class="ic ic-chevron-down size-icon-2xs show-lg"></i>
+                                                    <i class="ic ic-chevron-right size-icon-2xs hidden-device-lg"></i>
+                                                </a>
+
+                                                <ul class="submenu">
+                                                    <li class="hidden-device-lg">
+                                                        <a href="javascript:;" class="submenu-mb-back">
+                                                            <span>
+                                                                <i class="ic ic-chevron-left"></i>
+                                                                ABOUT US
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="has-submenu">
+                                                        <a href="javascript:;">
+                                                            ABOUT
+                                                            <i class="ic ic-chevron-right size-icon-2xs"></i>
+                                                        </a>
+
+                                                        <ul class="submenu last-level">
+                                                            <li>
+                                                                <a href="<?php echo $root; ?>about-history.php">HISTORY</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo $root; ?>about-vision.php">VISION & VALUE</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo $root; ?>about-team.php">OUR TEAM</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo $root; ?>about-support.php">SUPPORT PGVIM</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo $root; ?>about-showcase.php">SHOWCASES</a>
+                                                    </li>
+                                                </ul>
                                             </li>
-                                            <li id="learning-breadcrumb-trigger" class="breadcrumb-trigger">
-                                                <p>
-                                                    LEARNING & OPPORTUNITIES
-                                                    <i class="ic ic-chevron-down size-icon-2xs show-md"></i>
-                                                    <i class="ic ic-chevron-right size-icon-2xs hidden-device-md"></i>
-                                                </p>
+
+                                            <li class="has-submenu first-level">
+                                                <a href="javascript:;">
+                                                    LEARNING & OPPORTUNITY
+                                                    <i class="ic ic-chevron-down size-icon-2xs show-lg"></i>
+                                                    <i class="ic ic-chevron-right size-icon-2xs hidden-device-lg"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li class="hidden-device-lg">
+                                                        <a href="javascript:;" class="submenu-mb-back">
+                                                            <span>
+                                                                <i class="ic ic-chevron-left"></i>
+                                                                LEARNING & OPPORTUNITY
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo $root; ?>learning-program.php">PROGRAMS</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo $root; ?>learning-opportunity.php">OPPORTUNITY</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="has-submenu first-level">
+                                                <a href="javascript:;">
+                                                    OUR SERVICES
+                                                    <i class="ic ic-chevron-down size-icon-2xs show-lg"></i>
+                                                    <i class="ic ic-chevron-right size-icon-2xs hidden-device-lg"></i>
+                                                </a>
+
+                                                <ul class="submenu">
+                                                    <li class="hidden-device-lg">
+                                                        <a href="javascript:;" class="submenu-mb-back">
+                                                            <span>
+                                                                <i class="ic ic-chevron-left"></i>
+                                                                OUR SERVICES
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="has-submenu">
+                                                        <a href="javascript:;">
+                                                            INTERNAL SERVICES
+                                                            <i class="ic ic-chevron-right size-icon-2xs"></i>
+                                                        </a>
+
+                                                        <ul class="submenu">
+                                                            <li class="hidden-device-lg">
+                                                                <a href="javascript:;" class="submenu-mb-back">
+                                                                    <span class="opacity-05">
+                                                                        <i class="ic ic-chevron-left"></i>
+                                                                        OUR SERVICES
+                                                                    </span>
+                                                                    <span>
+                                                                        <i class="ic ic-chevron-left"></i>
+                                                                        INTERNAL SERVICES
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="has-submenu">
+                                                                <a href="javascript:;">
+                                                                    FOR STUDENTS
+                                                                    <i class="ic ic-chevron-right size-icon-2xs"></i>
+                                                                </a>
+
+                                                                <ul class="submenu last-level">
+                                                                    <li><a href="#link-out">ROOM BOOKING</a></li>
+                                                                    <li><a href="#link-out">SCHOLARSHIPS</a></li>
+                                                                    <li><a href="#link-out">REGISTRATION</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#link-out">
+                                                                    STAFF & FACULTY
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#link-out">
+                                                                    ALUMNI
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo $root; ?>service-external.php">EXTERNAL SERVICES</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <a href="<?php echo $root; ?>activities.php">
+                                                    ACTIVITIES & PROJECTS
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="<?php echo $root; ?>news.php">
+                                                    NEWS & ANNOUNCEMENT
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="<?php echo $root; ?>contact.php">
+                                                    CONTACT
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="decoration hidden-device-md">
-                                <div class="illustration var-2">
-                                    <img src="./assets/media/design/illustration2.svg" alt="Illustration">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Menu Breadcrumb -->
-                <div id="about-breadcrumb" class="breadcrumb">
-                    <div class="wrapper">
-                        <div class="panel-scroll" data-lenis-prevent>
-                            <div class="panel-container">
-                                <div class="panel-body">
-                                    <div class="breadcrumb-menu">
-                                        <a href="javascript:;" class="breadcrumb-close hidden-device-md">
-                                            <i class="ic ic-chevron-left size-icon-2xs"></i>
-                                            ABOUT US
-                                        </a>
-                                        <a href="<?php echo $root; ?>about-history.php">
-                                            HISTORY
-                                        </a>
+                            <div class="panel-footer">
+                                <?php
+                                include($root . 'include/language-select.php');
+                                ?>
+                                <div class="panel-decoration hidden-device-lg">
+                                    <div class="object-auto">
+                                        <img src="./assets/media/design/illustration2.svg" alt="Illustration">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="decoration hidden-device-md">
-                            <div class="illustration var-1">
-                                <img src="./assets/media/design/illustration1.svg" alt="Illustration">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="learning-breadcrumb" class="breadcrumb">
-                    <div class="wrapper">
-                        <div class="panel-scroll" data-lenis-prevent>
-                            <div class="panel-container">
-                                <div class="panel-body">
-                                    <div class="breadcrumb-menu">
-                                        <a href="javascript:;" class="breadcrumb-close hidden-device-md">
-                                            <i class="ic ic-chevron-left size-icon-2xs"></i>
-                                            LEARNING & OPPORTUNITIES
-                                        </a>
-                                        <a href="<?php echo $root; ?>learning-program.php">
-                                            PROGRAMS
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="decoration hidden-device-md">
-                            <div class="illustration var-4">
-                                <img src="./assets/media/design/illustration4.svg" alt="Illustration">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Menu Ctrl -->
-                <div class="header-menu-ctrl hidden-device-md">
+                <div class="header-menu-ctrl hidden-device-lg">
                     <a class="ctrl" href="javascript:;">
                         <span class="hamburger"><span class="bars">&nbsp;</span></span>
                     </a>

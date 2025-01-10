@@ -2,127 +2,115 @@
 
 <?php include($root . "header.php"); ?>
 
-<main id="about-history-main" class="about-history-main main">
+<main id="main" class="about-history-main">
     <section id="history-hero" class="sc hero height-screen">
         <div class="sc-inner">
-            <?php
-            $directory_arr = array(
-                array(
-                    "name" => "HOME",
-                    "url" => $root . "index.php"
-                ),
-                array(
-                    "name" => "ABOUT US",
-                    "url" => ""
-                ),
-                array(
-                    "name" => "HISTORY",
-                    "url" => ""
-                )
-            );
+            <div class="container">
+                <?php
+                $directory_arr = [
+                    [
+                        "name" => "HOME",
+                        "url" => $root . "index.php"
+                    ],
+                    [
+                        "name" => "ABOUT US",
+                        "url" => ""
+                    ],
+                    [
+                        "name" => "HISTORY",
+                        "url" => ""
+                    ]
+                ];
 
-            include($root . "include/element-directory.php");
-            ?>
-            <div class="section-header">
-                <h2 class="title animate fadeIn">
-                    HISTORY
-                </h2>
+                include($root . "include/element-directory.php");
+                ?>
 
-                <p class="description animate fadeIn" data-wow-delay="0.5s">
-                    The Princess Galyani Vadhana Institute of Music was established through the collaborative efforts of the Faculty of Music at Silpakorn University and the Ministry of Culture, who jointly developed the project to establish a music institute in the conservatory model. The institute was created to commemorate Her Royal Highness Princess Galyani Vadhana Krom Luang Naradhiwas Rajanagarindra on the auspicious occasion of her 84th birthday on May 6, 2007. This establishment acknowledged her boundless grace and numerous contributions to the Thai people throughout her life, as well as her aspiration to advance classical music in Thailand to international standards.
+                <?php
+                $section = [
+                    "title" => "HISTORY",
+                    "description" => 'The Princess Galyani Vadhana Institute of Music was established through the collaborative efforts of the Faculty of Music at Silpakorn University and the Ministry of Culture, who jointly developed the project to establish a music institute in the conservatory model. The institute was created to commemorate Her Royal Highness Princess Galyani Vadhana Krom Luang Naradhiwas Rajanagarindra on the auspicious occasion of her 84th birthday on May 6, 2007. This establishment acknowledged her boundless grace and numerous contributions to the Thai people throughout her life, as well as her aspiration to advance classical music in Thailand to international standards.
                     <br><br>
-                    When Professor Emeritus Khunying Khaisri Sri-aroon was serving as the Minister of Culture at that time, she presented the project for establishing a higher education institution for music to Her Royal Highness. Princess Galyani Vadhana graciously bestowed the name "Princess Galyani Vadhana Institute of Music" upon the institution.
-                </p>
+                    When Professor Emeritus Khunying Khaisri Sri-aroon was serving as the Minister of Culture at that time, she presented the project for establishing a higher education institution for music to Her Royal Highness. Princess Galyani Vadhana graciously bestowed the name "Princess Galyani Vadhana Institute of Music" upon the institution.'
+                ];
 
-                <div class="read-more-toggle hidden-device-md">
-                    <a href="javascript:;" data-text-read-more="Read more" data-text-show-less="Show less">Read More</a>
-                </div>
-            </div>
+                include($root . "include/section-header.php");
+                ?>
 
-            <div class="hero-marquee-wrapper animate fadeIn">
-                <div class="history-timeline">
-                    <?php
-                    $staff_title = "HISTORY";
+                <div class="marquee-full-screen animate fadeIn">
+                    <div class="history-timeline">
+                        <?php
+                        $staff_title = "HISTORY";
 
-                    include($root . "include/element-staff.php");
-                    ?>
+                        include($root . "include/element-staff.php");
+                        ?>
 
-                    <div class="marquee-wrapper animate fadeIn">
-                        <div class="marquee" data-js="liMarquee">
-                            <?php
-                            $timeline_card_arr = [
-                                [
-                                    "link" => "#timeline-1",
-                                    "image" => "./assets/media/design/2007.jpg",
-                                    "year" => "2007",
-                                    "title" => "Beginning",
-                                ],
-                                [
-                                    "link" => "#timeline-2",
-                                    "image" => "./assets/media/design/2008.jpg",
-                                    "year" => "2008",
-                                    "title" => "Location",
-                                ],
-                                [
-                                    "link" => "#timeline-3",
-                                    "image" => "./assets/media/design/2009.jpg",
-                                    "year" => "2009",
-                                    "title" => "Design and Construction",
-                                ],
-                                [
-                                    "link" => "#timeline-4",
-                                    "image" => "./assets/media/design/2011.jpg",
-                                    "year" => "2011",
-                                    "title" => "Milestone",
-                                ],
-                                [
-                                    "link" => "#timeline-5",
-                                    "image" => "./assets/media/design/2012.jpg",
-                                    "year" => "2012",
-                                    "title" => "Authorization",
-                                ],
-                                [
-                                    "link" => "#timeline-6",
-                                    "image" => "./assets/media/design/2014.jpg",
-                                    "year" => "2014",
-                                    "title" => "Launch",
-                                ],
-                                [
-                                    "link" => "#timeline-7",
-                                    "image" => "./assets/media/design/2016.jpg",
-                                    "year" => "2016",
-                                    "title" => "Ceremony",
-                                ],
-                                [
-                                    "link" => "#timeline-8",
-                                    "image" => "./assets/media/design/2017.jpg",
-                                    "year" => "2017",
-                                    "title" => "Infrastructure",
-                                ]
-                            ];
+                        <div class="marquee-wrapper animate fadeIn">
+                            <div class="marquee" data-js="liMarquee">
+                                <?php
+                                $timeline_card_arr = [
+                                    [
+                                        "slide-link" => "#timeline-1",
+                                        "image" => "./assets/media/design/2007.jpg",
+                                        "description" => "2007",
+                                        "title" => "Beginning",
+                                        "decoration" => "true"
+                                    ],
+                                    [
+                                        "slide-link" => "#timeline-2",
+                                        "image" => "./assets/media/design/2008.jpg",
+                                        "description" => "2008",
+                                        "title" => "Location",
+                                        "decoration" => "true"
+                                    ],
+                                    [
+                                        "slide-link" => "#timeline-3",
+                                        "image" => "./assets/media/design/2009.jpg",
+                                        "description" => "2009",
+                                        "title" => "Design and Construction",
+                                        "decoration" => "true"
+                                    ],
+                                    [
+                                        "slide-link" => "#timeline-4",
+                                        "image" => "./assets/media/design/2011.jpg",
+                                        "description" => "2011",
+                                        "title" => "Milestone",
+                                        "decoration" => "true"
+                                    ],
+                                    [
+                                        "slide-link" => "#timeline-5",
+                                        "image" => "./assets/media/design/2012.jpg",
+                                        "description" => "2012",
+                                        "title" => "Authorization",
+                                        "decoration" => "true"
+                                    ],
+                                    [
+                                        "slide-link" => "#timeline-6",
+                                        "image" => "./assets/media/design/2014.jpg",
+                                        "description" => "2014",
+                                        "title" => "Launch",
+                                        "decoration" => "true"
+                                    ],
+                                    [
+                                        "slide-link" => "#timeline-7",
+                                        "image" => "./assets/media/design/2016.jpg",
+                                        "description" => "2016",
+                                        "title" => "Ceremony",
+                                        "decoration" => "true"
+                                    ],
+                                    [
+                                        "slide-link" => "#timeline-8",
+                                        "image" => "./assets/media/design/2017.jpg",
+                                        "description" => "2017",
+                                        "title" => "Infrastructure",
+                                        "decoration" => "true"
+                                    ]
+                                ];
 
-                            foreach ($timeline_card_arr as $index => $timeline_card) {
-                                $var_num = ($index % 4) + 1;
-                            ?>
-                                <div class="marquee-item">
-                                    <div class="image">
-                                        <p class="year size-h4"><?php echo $timeline_card["year"] ?></p>
-                                        <div class="circle-hover">
-                                            <a href="javascript:;" data-slide-id="<?php echo $timeline_card["link"] ?>" class="link-overlay timeline-trigger">&nbsp;</a>
-                                            <img src="<?php echo $timeline_card["image"] ?>" alt="Timeline Image <?php echo $index + 1 ?>" loading="lazy" draggable="false">
-                                        </div>
-                                        <p class="title size-h5 c-blue"><?php echo $timeline_card["title"] ?></p>
-
-                                    </div>
-                                    <div class="decoration">
-                                        <div class="illustration var-<?php echo $var_num; ?>">
-                                            <img src="./assets/media/design/about-illustration<?php echo $var_num; ?>.svg" alt="Illustration" loading="lazy" draggable="false">
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php
-                            }
-                            ?>
+                                foreach ($timeline_card_arr as $index => $item) {
+                                    include($root . "include/staff-cta-item.php");
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -317,7 +305,7 @@
                                             <h3 class="year size-h3">(<?php echo $timeline["year"] ?>)</h3>
                                         </div>
                                         <div class="swiper-navigation hidden-device-md">
-                                            <div class="wrapper">
+                                            <div class="nav-wrapper">
                                                 <div class="history-slides-swiper-button-prev swiper-button-prev"></div>
                                                 <div class="history-slides-swiper-button-next swiper-button-next"></div>
                                             </div>

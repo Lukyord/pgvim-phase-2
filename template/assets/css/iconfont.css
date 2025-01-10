@@ -25,6 +25,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-calendar_today:before {
+    content: "\e95d";
+}
 .ic-history:before {
     content: "\e95c";
 }
