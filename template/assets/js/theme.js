@@ -1316,6 +1316,8 @@ jQuery(document).ready(function ($) {
 
     // SUBMENU STYLING
     function submenuStyling() {
+        $(".submenu:not(.last-level)").css("display", "flex");
+
         $(".header-menu .has-submenu.first-level > a").each(function () {
             const hasSubmenu = $(this).parent();
             const submenu = hasSubmenu.children(".submenu").first();
@@ -1333,6 +1335,7 @@ jQuery(document).ready(function ($) {
 
             submenu.find("li").each(function () {
                 const currentWidth = $(this).outerWidth();
+                console.log($(this), currentWidth);
                 if (currentWidth > maxWidth) {
                     maxWidth = currentWidth;
                 }
@@ -1468,7 +1471,11 @@ jQuery(document).ready(function ($) {
         const submenu = $(this).siblings(".submenu");
 
         if (submenu.hasClass("last-level")) {
-            submenu.slideToggle(200);
+            submenu.slideToggle(200, function () {
+                if ($(this).is(":visible")) {
+                    $(this).css("display", "flex");
+                }
+            });
         }
 
         if (submenu.hasClass("open")) {
@@ -1744,6 +1751,11 @@ jQuery(document).ready(function ($) {
                     var contentHeight = $this
                         .find(".content-container")
                         .height();
+
+                    if (!isSmallScreen)
+                        $this
+                            .find(".content .wrapper")
+                            .removeClass("justify-between");
 
                     if (contentHeight < scrollContainerHeight) {
                         $this

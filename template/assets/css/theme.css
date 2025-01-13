@@ -4188,6 +4188,10 @@ html.no-touchevents .footer-nav .privacy-and-copyright .privacy-link:hover {
     background-color: var(--slide-color);
 }
 
+#history-slides .swiper-slide .wrapper {
+    max-height: 100vh;
+}
+
 #history-slides .swiper-slide .background-image {
     width: 100%;
     height: 100%;
@@ -4220,6 +4224,7 @@ html.no-touchevents .footer-nav .privacy-and-copyright .privacy-link:hover {
 #history-slides .content .wrapper {
     height: 100%;
     padding: var(--spacing-4xl) var(--page-padding);
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     grid-gap: var(--spacing-4xl);

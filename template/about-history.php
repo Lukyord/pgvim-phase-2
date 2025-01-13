@@ -335,7 +335,7 @@
             </div>
 
             <div class="swiper-navigation show-md">
-                <div class="wrapper">
+                <div class="nav-wrapper">
                     <div class="history-slides-swiper-button-prev swiper-button-prev"></div>
                     <div class="history-slides-swiper-button-next swiper-button-next"></div>
                 </div>
