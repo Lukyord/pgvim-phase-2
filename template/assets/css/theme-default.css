@@ -36,6 +36,14 @@
     display: flex;
 }
 
+.sc.hero .sc-inner:has(.cta-tabs.swiper) {
+    padding-bottom: 0 !important;
+}
+
+.sc.hero:has(.cta-tabs.swiper) + .sc .sc-inner {
+    padding-top: 0 !important;
+}
+
 .sc.hero.height-screen {
     min-height: 100svh;
 }
@@ -592,7 +600,7 @@ html.no-touchevents .circle-hover:hover::before {
 
 .grid-gallery-item .content .text .info .type:after {
     content: "|";
-    color: var(--color-white);
+    color: var(--color-gold);
     padding: 0 var(--spacing-6xs) 0 var(--spacing-4xs);
 }
 
@@ -771,7 +779,7 @@ html.no-touchevents .grid-gallery-item .content .cta .read-more:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .grid-gallery.zigzag .wrapper {
+    .grid-gallery.zigzag > .wrapper {
         row-gap: var(--spacing-md);
         padding: 0 var(--page-padding);
     }
@@ -824,6 +832,14 @@ html.no-touchevents .grid-gallery-item .content .cta .read-more:hover {
     .fancybox__content > .f-button.is-close-btn {
         top: var(--spacing-5xs);
         right: var(--spacing-5xs);
+    }
+}
+
+@media (max-width: 575px) {
+    .grid-gallery-item .content .text .info,
+    .grid-gallery-item .content .text .info .type {
+        display: block;
+        line-height: 1.4;
     }
 }
 
@@ -1041,19 +1057,23 @@ html.no-touchevents .grid-gallery-item .content .cta .read-more:hover {
         overflow: visible !important;
     }
 
-    .swiper-slide-active .tab-card:has(.hover-image) .content-wrapper {
+    .cta-tabs.swiper.box-tab {
+        margin-top: calc((var(--content-wrapper-height) - 13.85rem) * 2);
+    }
+
+    .swiper-slide.active .tab-card:has(.hover-image) .content-wrapper {
         height: 30rem;
     }
 
-    .swiper-slide-active .tab-card .hover-image {
+    .swiper-slide.active .tab-card .hover-image {
         opacity: 1;
     }
 
-    .swiper-slide-active .tab-card:has(.hover-description) .content-wrapper {
+    .swiper-slide.active .tab-card:has(.hover-description) .content-wrapper {
         height: var(--content-wrapper-full-height);
     }
 
-    .swiper-slide-active .tab-card .hover-description {
+    .swiper-slide.active .tab-card .hover-description {
         opacity: 1;
         margin-bottom: 0;
     }
@@ -1120,6 +1140,13 @@ html.page-scrolling--up .two-side-content .sticky-image .image {
     font-size: var(--font-size-h3);
     line-height: var(--line-height-h3);
     max-width: 42.6rem;
+}
+
+.two-side-content .info .main-content .subtitle {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    color: var(--color-black);
+    text-transform: capitalize;
 }
 
 @media (min-width: 992px) {
@@ -1335,7 +1362,7 @@ html.page-scrolling--up .two-side-content .sticky-image .image {
 }
 
 .swiper-slide .staff-cta-item {
-    padding-right: 17.8472222222vw;
+    padding-right: min(17.8472222222vw, 10rem);
 }
 
 .swiper-slide:last-child .staff-cta-item {
@@ -1431,7 +1458,7 @@ html.page-scrolling--up .two-side-content .sticky-image .image {
     .swiper-slide .staff-cta-item {
         padding: 0;
         justify-content: center;
-        width: 53.5897435897vw;
+        /* width: 53.5897435897vw; */
         max-width: 39rem;
     }
 
@@ -1541,7 +1568,7 @@ html.page-scrolling--up .two-side-content .sticky-image .image {
 [data-card="detail"] .card-subttl,
 [data-card="detail"] .card-date {
     font-size: var(--font-size-sub);
-    line-height: var(--line-height-sub);
+    line-height: 1.4;
     color: var(--color-gold);
     text-transform: uppercase;
     display: inline;
@@ -1593,6 +1620,13 @@ html.page-scrolling--up .two-side-content .sticky-image .image {
     }
 }
 
+@media (max-width: 575px) {
+    [data-card="detail"] .card-subttl,
+    [data-card="detail"] .card-date {
+        display: block;
+    }
+}
+
 /* COLLECTION CONTENT ==================== */
 .collection-content-header {
     display: flex;
@@ -1622,8 +1656,8 @@ html.page-scrolling--up .two-side-content .sticky-image .image {
 }
 
 .collection-content .card-container {
-    --gap-x: var(--spacing-2lg);
-    --gap-y: var(--spacing-2lg);
+    --gap-x: var(--spacing-lg);
+    --gap-y: var(--spacing-lg);
     --column: 4;
 }
 
@@ -1725,8 +1759,8 @@ html.page-scrolling--up .two-side-content .sticky-image .image {
     }
 
     .collection-content .card-container {
-        --gap-x: var(--spacing-xs);
-        --gap-y: var(--spacing-2sm);
+        --gap-x: var(--spacing-2sm);
+        --gap-y: var(--spacing-xs);
         --column: 2;
     }
 

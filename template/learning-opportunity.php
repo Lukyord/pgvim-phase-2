@@ -41,7 +41,7 @@
                         include($root . "include/element-staff.php");
                         ?>
 
-                        <div class="swiper cta-tabs tab-links animate slideInFromRight">
+                        <div class="swiper cta-tabs box-tab tab-links animate slideInFromRight">
                             <div class="swiper-wrapper">
                                 <?php
                                 $tabs_arr = [

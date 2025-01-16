@@ -161,7 +161,7 @@
                 <?php
                 $staff = [
                     "link" => "javascript:;",
-                    "cta" => "SHOWMORE",
+                    "cta" => "SHOW MORE",
                     "extra-class" => "blue animate fadeIn"
                 ];
 
@@ -260,7 +260,7 @@
         </div>
     </section>
 
-    <section id="good-governance" class="sc">
+    <section id="good-governance-sc" class="sc">
         <?php
         $tab_detail = [
             "detail-title" => "GOOD<br>GOVERNANCE",
@@ -286,7 +286,7 @@
                 $staff = [
                     "file-download" => "true",
                     "link" => "#download",
-                    "cta" => "DOWNLOAD",
+                    "cta" => "DOWNLOAD REPORT",
                     "extra-class" => "animate fadeIn"
                 ];
 

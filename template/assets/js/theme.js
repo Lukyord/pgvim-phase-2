@@ -273,7 +273,10 @@ jQuery(document).ready(function ($) {
         }
 
         if ($(".rellax").length) {
-            new Rellax(".rellax", { center: true });
+            new Rellax(".rellax", {
+                center: true,
+                breakpoints: [576, 992, 1280],
+            });
         }
     }
 
@@ -1335,7 +1338,6 @@ jQuery(document).ready(function ($) {
 
             submenu.find("li").each(function () {
                 const currentWidth = $(this).outerWidth();
-                console.log($(this), currentWidth);
                 if (currentWidth > maxWidth) {
                     maxWidth = currentWidth;
                 }
@@ -1406,8 +1408,6 @@ jQuery(document).ready(function ($) {
         submenu.addClass("open");
         submenu.fadeIn(200);
     });
-
-    $(".has-submenu:not(.first-level) > a");
 
     // Close submenu when hovering the link in the parent submenu
     $(".submenu > li:not(.has-submenu)").on("mouseenter", function () {
@@ -1510,10 +1510,13 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
     if ($("#loading-screen").length) {
         $("#loading-screen").each(function () {
+            $(".cky-consent-container").hide();
+
             function forceFinishLoad() {
                 $("html").removeClass("no-scroll");
                 $("#loading-screen").addClass("loaded");
                 setTimeout(function () {
+                    $(".cky-consent-container").fadeIn();
                     $("#loading-screen").hide();
                 }, 1500);
             }
@@ -1531,6 +1534,26 @@ jQuery(document).ready(function ($) {
             }
         });
     }
+});
+
+// COOKIE
+jQuery(document).ready(function ($) {
+    $(".cky-consent-container").each(function () {
+        const btnWrapper = $(this).find(".cky-notice-btn-wrapper");
+        const btnCustomizeCookie = $(this).find(".cky-btn-customize");
+        const pNotice = $(this).find(".cky-notice-des > p");
+        const staffLines = `
+             <div class="staff-line"></div>
+        <div class="staff-line"></div>
+        <div class="staff-line"></div>
+        <div class="staff-line"></div>
+        <div class="staff-line"></div>
+        `;
+
+        btnWrapper.append(staffLines);
+
+        pNotice.append(btnCustomizeCookie);
+    });
 });
 
 // TOGGLE READMORE MOBILE
@@ -1598,8 +1621,8 @@ jQuery(document).ready(function ($) {
             function handleSlideChange(index) {
                 const $currentSlide = $this.find(".swiper-slide").eq(index);
                 const $link = $currentSlide.find("a");
-
                 const targetId = $link.attr("href");
+
                 showTab(targetId);
 
                 if ($(targetId).length) {
@@ -1617,10 +1640,13 @@ jQuery(document).ready(function ($) {
                 }
             }
 
-            $this.find(".swiper-slide").on("click", function () {
+            $this.find(".swiper-slide").on("click", function (e) {
+                e.preventDefault();
                 const slideIndex = $(this).index();
                 swiper.slideTo(slideIndex);
                 handleSlideChange(slideIndex);
+                $(".swiper-slide").removeClass("active");
+                $(this).addClass("active");
             });
         });
     }
@@ -1654,6 +1680,10 @@ jQuery(document).ready(function ($) {
 
                 hoverDescription.hide();
                 $(this).css(
+                    "--content-wrapper-height",
+                    contentWrapper.prop("scrollHeight") + "px"
+                );
+                $(".cta-tabs.swiper").css(
                     "--content-wrapper-height",
                     contentWrapper.prop("scrollHeight") + "px"
                 );

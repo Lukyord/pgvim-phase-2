@@ -135,13 +135,13 @@ $root = ""; ?>
 
     <section id="featured-news" class="sc">
         <div class="sc-inner sc-inner--follows overflow-visible">
-            <div class="illustration var-5 rellax" data-rellax-speed="-0.4">
+            <div class="illustration var-5 rellax" data-rellax-speed="-0.8" data-rellax-mobile-speed="0.5">
                 <img src="./assets/media/design/illustration5.svg" alt="Illustration" loading="lazy" draggable="false">
             </div>
-            <div class="illustration var-4 rellax" data-rellax-speed="-0.2">
+            <div class="illustration var-4 rellax" data-rellax-speed="-0.4" data-rellax-mobile-speed="0">
                 <img src="./assets/media/design/illustration4.svg" alt="Illustration" loading="lazy" draggable="false">
             </div>
-            <div class="illustration var-7 rellax show-md" data-rellax-speed="-0.4">
+            <div class="illustration var-7 rellax show-md" data-rellax-speed="-0.8">
                 <img src="./assets/media/design/illustration7.svg" alt="Illustration" loading="lazy" draggable="false">
             </div>
 

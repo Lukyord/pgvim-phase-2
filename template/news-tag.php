@@ -57,7 +57,7 @@
                 <?php
                 $staff = [
                     "link" => "javascript:;",
-                    "cta" => "SHOWMORE",
+                    "cta" => "SHOW MORE",
                     "extra-class" => "blue animate fadeIn"
                 ];
 

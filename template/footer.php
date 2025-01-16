@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="links">
-                <div class="accordion-container trigger-first">
+                <div class="accordion-container">
                     <div class="accordion">
                         <h3 class="entry-title">ABOUT US</h3>
                         <div class="entry-panel">
@@ -149,7 +149,10 @@
 <div id="clipboard" style="display:none;">Copied</div>
 </div><!-- CLOSE:#page -->
 
-<?php //if($page_index) { include($root."include/_wp-code/wp-cookie-law-info-bar.php"); } 
+<?php
+if ($page_index) {
+    include($root . "include/_wp-code/wp-cookie-law-info-bar.php");
+}
 ?>
 
 <!-- <div id="page-message">

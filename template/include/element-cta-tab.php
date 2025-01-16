@@ -4,8 +4,6 @@
             href="<?php
                     if (isset($tab["tab-id"]) && $tab["tab-id"] !== "") {
                         echo $tab["tab-id"];
-                    } else {
-                        echo "javascript:;";
                     } ?>"
             <?php if (
                 isset($tab["tab-id"]) &&

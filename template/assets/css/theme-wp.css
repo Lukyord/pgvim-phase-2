@@ -25,13 +25,13 @@
     border-radius: 0 !important;
     box-shadow: 0px 4px 9px 0px
         rgba(var(--color-black-rgb), var(--opacity-light)) !important;
-    background: var(--color-white) !important;
-    color: var(--color-black) !important;
+    background: var(--color-theme) !important;
+    color: var(--color-white) !important;
     font-family: var(--font-body) !important;
     font-weight: var(--font-weight-body) !important;
     font-size: var(--font-size-body) !important;
     line-height: var(--line-height-body) !important;
-    padding: var(--spacing-2sm) !important;
+    padding: var(--spacing-3lg) !important;
     transition: var(--duration) var(--timing-function) !important;
 }
 .cky-notice .cky-title,
@@ -43,6 +43,16 @@
     line-height: inherit !important;
     color: inherit !important;
 }
+.cky-notice-des {
+    max-width: 87rem;
+}
+
+.cky-notice-des p > .cky-btn-customize {
+    text-decoration: underline !important;
+    opacity: 0.5 !important;
+    padding-left: 0.3em !important;
+}
+
 .cky-notice .cky-title {
     margin: 0 !important;
     font-family: var(--font-heading) !important;
@@ -64,7 +74,7 @@
     flex-direction: column !important;
     align-items: flex-start !important;
     justify-content: flex-start !important;
-    grid-gap: var(--spacing-2sm) !important;
+    grid-gap: var(--spacing-3lg) !important;
 }
 .cky-notice-group > * {
     width: 100% !important;
@@ -90,16 +100,47 @@
     opacity: var(--opacity) !important;
 }
 .cky-notice-btn-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 100vw !important;
+    max-width: unset !important;
     margin: 0 !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
+    margin-left: calc(-1 * var(--spacing-3lg)) !important;
+    padding-left: var(--spacing-3lg) !important;
+    display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     text-align: center !important;
-    grid-gap: var(--spacing-xs) !important;
+    grid-gap: var(--spacing-xl) !important;
+    position: relative !important;
 }
+
+.cky-notice-btn-wrapper .staff-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(var(--color-white-rgb), 0.4);
+    position: absolute !important;
+    left: 0;
+}
+
+.cky-notice-btn-wrapper .staff-line:nth-child(3) {
+    top: 0;
+}
+
+.cky-notice-btn-wrapper .staff-line:nth-child(4) {
+    top: 25%;
+}
+
+.cky-notice-btn-wrapper .staff-line:nth-child(5) {
+    top: 50%;
+}
+
+.cky-notice-btn-wrapper .staff-line:nth-child(6) {
+    top: 75%;
+}
+
+.cky-notice-btn-wrapper .staff-line:nth-child(7) {
+    top: 100%;
+}
+
 .cky-notice-btn-wrapper .cky-btn {
     text-decoration: none !important;
     box-shadow: none !important;
@@ -119,14 +160,14 @@
     border: 0 !important;
     border-radius: 0 !important;
     background: none !important;
-    color: var(--color-theme) !important;
+    color: var(--color-white) !important;
     font-family: var(--font-heading) !important;
-    font-weight: var(--font-weight-regular) !important;
+    font-weight: var(--font-weight-light) !important;
     font-style: normal !important;
-    font-size: var(--font-size-body-sub) !important;
-    line-height: normal !important;
+    font-size: 4.2rem !important;
+    line-height: 2.8rem !important;
     text-transform: uppercase !important;
-    letter-spacing: var(--letter-spacing) !important;
+    letter-spacing: 0 !important;
     text-indent: 0 !important;
     text-align: center !important;
     overflow: visible !important;
@@ -144,44 +185,27 @@
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    height: var(--button-height) !important;
+    height: auto !important;
     min-width: 0 !important;
-    padding: 0 var(--gap-x) !important;
+    padding: 0 !important;
     grid-gap: var(--gap-y) var(--gap-x) !important;
     color: var(--color-theme-couple) !important;
-    background: var(--color-theme) !important;
-    border: var(--border-width) solid var(--color-theme) !important;
-    border-radius: 50vw !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
     opacity: 1 !important;
     overflow: hidden !important;
 }
-.cky-notice-btn-wrapper
-    .cky-btn:is(.cky-btn-accept, .cky-btn-reject)
-    > *:is(.text, .icon) {
-    transition: var(--duration) var(--timing-function);
-    transition-property: opacity, transform;
-}
-.cky-notice-btn-wrapper .cky-btn:is(.cky-btn-accept, .cky-btn-reject) > .icon {
-    display: block;
-    width: var(--icon-width);
-    height: var(--icon-height);
-    background-color: transparent;
-    background-image: url(../media/icon/arrow.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-filter: var(--filter-theme-couple);
-    filter: var(--filter-theme-couple);
-}
+
 .cky-notice-btn-wrapper .cky-btn:is(.cky-btn-reject):not(:hover) {
-    color: var(--color-theme) !important;
-    background: transparent !important;
-    border-color: var(--border-color) !important;
+    opacity: 0.4 !important;
 }
-.cky-notice-btn-wrapper .cky-btn:is(.cky-btn-reject):not(:hover) > .text {
-    transform: translateX(calc((var(--icon-width) + var(--gap-x)) / 2));
+.cky-notice-btn-wrapper .cky-btn:is(.cky-btn-accept):hover {
+    opacity: 0.8 !important;
 }
-.cky-notice-btn-wrapper .cky-btn:is(.cky-btn-reject):not(:hover) > .icon {
-    opacity: 0;
+
+.cky-notice-des p .cky-btn:is(.cky-btn-customize):hover {
+    opacity: 0.8 !important;
 }
 
 .cky-notice-btn-wrapper .cky-btn-customize {
@@ -194,15 +218,32 @@
     max-width: 100% !important;
 }
 .cky-notice-btn-wrapper .cky-btn-reject {
-    order: 0;
+    order: 1;
+    opacity: 0.8 !important;
 }
 .cky-notice-btn-wrapper .cky-btn-accept {
-    order: 1;
+    order: 0;
 }
 
-@media (min-width: 576px) {
-    .cky-consent-container {
-        width: 390px !important;
+@media (max-width: 991px) {
+    .cky-consent-container .cky-consent-bar {
+        padding: var(--spacing-2md) var(--page-padding) !important;
+    }
+
+    .cky-notice-group {
+        grid-gap: var(--spacing-2md) !important;
+    }
+
+    .cky-notice-btn-wrapper {
+        margin-left: calc(-1 * var(--page-padding)) !important;
+        padding-left: var(--page-padding) !important;
+        grid-gap: var(--spacing-md) !important;
+    }
+
+    .cky-notice-btn-wrapper .cky-btn {
+        font-size: 2.8rem !important;
+        line-height: 1.8rem !important;
+        font-weight: var(--font-weight-regular) !important;
     }
 }
 

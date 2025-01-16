@@ -14,8 +14,6 @@
                     "date" => "24 August 2024",
                     "time" => "15:30 - 16:30 hrs (GMT+7)"
                 ],
-                "link" => $root . "activity-single.php",
-                "cta" => "READ MORE",
             ],
         ];
 
@@ -96,25 +94,25 @@
                     "id" => "you-may-also-like",
                     "title" => "YOU MAY ALSO LIKE",
                     "card-content" => [
-                        "image" => "./assets/media/design/history-image1.jpg",
-                        "title" => "Recital Room with grand piano",
-                        "description" => "Room with piano (Yamaha grand C3)",
+                        "image" => "./assets/media/design/history-image3.jpg",
+                        "subtitle" => "performance",
+                        "title" => "DreamLand",
+                        "description" => "Mahakat Mahaniranon & TYOY Ensemble",
                         "detail" => [
-                            "room size" => "250x410 cm",
-                            "price" => "500THB/hour 500THB/hour",
-                            "capacity" => "1-12 people",
+                            "date" => "24 August 2024",
+                            "time" => "3.30-4.30 PM",
                         ]
                     ],
                 ];
                 ?>
                 <div class="collection-content tab-container">
-                    <div class="illustration var-1 rellax" data-rellax-speed="-0.4">
+                    <div class="illustration var-1 rellax" data-rellax-speed="-0.8" data-rellax-mobile-speed="-2">
                         <img src="./assets/media/design/illustration1.svg" alt="Illustration" loading="lazy" draggable="false">
                     </div>
-                    <div class="illustration var-5 rellax" data-rellax-speed="-0.2">
+                    <div class="illustration var-5 rellax" data-rellax-speed="-0.4" data-rellax-mobile-speed="0">
                         <img src="./assets/media/design/illustration5.svg" alt="Illustration" loading="lazy" draggable="false">
                     </div>
-                    <div class="illustration var-2 rellax show-md" data-rellax-speed="-0.4">
+                    <div class="illustration var-2 rellax show-md" data-rellax-speed="-0.8">
                         <img src="./assets/media/design/illustration2.svg" alt="Illustration" loading="lazy" draggable="false">
                     </div>
 
