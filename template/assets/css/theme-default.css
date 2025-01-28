@@ -40,7 +40,7 @@
     padding-bottom: 0 !important;
 }
 
-.sc.hero:has(.cta-tabs.swiper) + .sc .sc-inner {
+.sc.hero:has(.cta-tabs.swiper) + .sc .sc-inner:not(.padding-top) {
     padding-top: 0 !important;
 }
 

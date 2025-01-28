@@ -7,7 +7,7 @@
     include($root . "include/element-scroll-top-button.php");
     ?>
 
-    <section id="service-external-hero" class="sc hero height-screen">
+    <section id="activities-hero" class="sc hero height-screen">
         <div class="sc-inner sc-inner--precedes">
             <div class="container">
                 <?php
@@ -133,7 +133,7 @@
                 include($root . "include/banner-slide.php");
                 ?>
 
-                <div class="sc-inner">
+                <div class="sc-inner padding-top">
                     <div class="container">
                         <div class="collection-content tab-container">
 
