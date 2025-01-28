@@ -1,11 +1,9 @@
 <div class="banner-slide">
     <div class="wrapper animate fadeIn">
-
         <?php
-        if (isset($slide_subtitle)) {
-        ?>
-            <p class="section-description"><?php echo $slide_subtitle ?></p>
-        <?php } ?>
+        if (isset($directory_arr)) {
+            include($root . "include/element-directory.php");
+        } ?>
 
         <div class="swiper">
             <div class="swiper-wrapper">

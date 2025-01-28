@@ -5,6 +5,20 @@
 <main id="main" class="activity-single-main">
     <section id="activity-single-hero" class="sc hero">
         <?php
+        $directory_arr = [
+            [
+                "name" => "HOME",
+                "url" => $root . "index.php"
+            ],
+            [
+                "name" => "ACTIVITIES & PROJECTS",
+                "url" => $root . "activities.php"
+            ],
+            [
+                "name" => "WAVE OF EMOTION",
+                "url" => ""
+            ]
+        ];
         $slide_arr = [
             [
                 "image" => "./assets/media/design/event-bg.jpg",

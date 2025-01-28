@@ -36,8 +36,6 @@
                 <div class="staff-cta-wrapper animate fadeIn">
                     <div class="inner-wrapper">
                         <?php
-                        $staff_title = "OUR PROMISE";
-
                         include($root . "include/element-staff.php");
                         ?>
 

@@ -103,7 +103,12 @@
 
     <section id="index-announcement" class="sc">
         <?php
-        $slide_subtitle = "ANNOUNCEMENT";
+        $directory_arr = [
+            [
+                "name" => "ANNOUNCEMENT",
+                "url" => ""
+            ],
+        ];
         $slide_arr = [
             [
                 "image" => "./assets/media/design/index-announcement-image1.jpg",

@@ -34,7 +34,7 @@
                 include($root . "include/section-header.php");
                 ?>
 
-                <div class="staff-cta-wrapper animate fadeIn">
+                <div class="staff-cta-wrapper slide animate fadeIn" style="--slide-column: 2;">
                     <div class="inner-wrapper">
                         <?php
                         include($root . "include/element-staff.php");
@@ -81,6 +81,12 @@
                 $tab_detail = [
                     "id" => "event-activity",
                     "title" => "EVENT & ACTIVITY",
+                    "type" => [
+                        "event-activity-all" => "All",
+                        "event-activity-summer-camp" => "Summer Camps",
+                        "event-activity-performances" => "Performances",
+                        "event-activity-festival" => "Festival",
+                    ],
                     "card-content" => [
                         "image" => "./assets/media/design/history-image2.jpg",
                         "subtitle" => "Performance",
@@ -96,7 +102,12 @@
                 ?>
 
                 <?php
-                $slide_subtitle = "FEATURED EVENTS";
+                $directory_arr = [
+                    [
+                        "name" => "FEATURED EVENTS",
+                        "url" => ""
+                    ],
+                ];
                 $slide_arr = [
                     [
                         "image" => "./assets/media/design/event-bg.jpg",
@@ -141,14 +152,43 @@
                                 <h2 class="title animate fadeIn size-h3 c-blue uppercase">
                                     <?php echo $tab_detail["title"] ?>
                                 </h2>
+
+                                <div class="swiper auto tab-links animate fadeIn">
+                                    <div class="swiper-wrapper">
+                                        <?php
+                                        foreach ($tab_detail["type"] as $key => $value) {
+                                            $first_key = array_key_first($tab_detail["type"]);
+                                        ?>
+                                            <div class="swiper-slide">
+                                                <div class="tab">
+                                                    <a href="#<?php echo $key ?>" class="button <?php if ($key == $first_key) echo "active" ?>">
+                                                        <?php echo $value ?>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        <?php
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
                             </div>
 
-
-                            <div class="card-container" data-card-layout="grid">
+                            <div class="tab-contents">
                                 <?php
-                                for ($i = 1; $i <= 7; $i++) {
-                                    include($root . "include/detail-card.php");
-                                } ?>
+                                foreach ($tab_detail["type"] as $key => $value) {
+                                    $first_key = array_key_first($tab_detail["type"]);
+                                ?>
+                                    <div class="tab-content <?php if ($key == $first_key) echo "active"; ?>" id="<?php echo $key ?>">
+                                        <div class="card-container" data-card-layout="grid">
+                                            <?php
+                                            for ($i = 1; $i <= 7; $i++) {
+                                                include($root . "include/detail-card.php");
+                                            } ?>
+                                        </div>
+                                    </div>
+                                <?php
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>

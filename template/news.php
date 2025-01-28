@@ -34,7 +34,7 @@
                 include($root . "include/section-header.php");
                 ?>
 
-                <div class="staff-cta-wrapper animate fadeIn">
+                <div class="staff-cta-wrapper slide animate fadeIn" style="--slide-column: 3;">
                     <div class="inner-wrapper">
                         <?php
                         include($root . "include/element-staff.php");

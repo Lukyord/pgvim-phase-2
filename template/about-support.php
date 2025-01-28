@@ -101,7 +101,7 @@
     <section id="ways-to-support" class="sc">
         <div class="sc-inner sc-inner--follows">
             <div class="container">
-                <div class="staff-cta-wrapper animate fadeIn">
+                <div class="staff-cta-wrapper animate fadeIn slide" style="--slide-column: 3;">
                     <div class="inner-wrapper">
                         <?php
                         $staff_title = "WAYS TO SUPPORT US";
