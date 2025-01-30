@@ -221,6 +221,8 @@
                                         </div>
                                     </div>
 
+                                    <?php
+                                    /*
                                     <div class="field animate fadeIn">
                                         <div class="input">
                                             <label class="label" for="room-type-<?php echo $tab_detail["id"] ?>">Room Type</label>
@@ -274,11 +276,12 @@
                                             </div>
                                         </div>
                                     </div>
+                                    */ ?>
 
                                     <div class="field animate fadeIn">
                                         <div class="input">
-                                            <label class="label" for="remark-<?php echo $tab_detail["id"] ?>">Remark</label>
-                                            <textarea name="remark-<?php echo $tab_detail["id"] ?>" id="remark-<?php echo $tab_detail["id"] ?>" placeholder="Type Here"></textarea>
+                                            <label class="label" for="message-<?php echo $tab_detail["id"] ?>">Message</label>
+                                            <textarea name="message-<?php echo $tab_detail["id"] ?>" id="message-<?php echo $tab_detail["id"] ?>" placeholder="Type Here"></textarea>
                                         </div>
                                     </div>
                                 </div>
